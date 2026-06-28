@@ -27,7 +27,7 @@ This project focuses on common Active Directory connectivity checks that IT supp
 This tool performs network and directory-connectivity checks against domain-controller hostnames supplied by the user. Do not publish real internal domain names, controller hostnames, IP addresses, or troubleshooting output from private environments.
 
 Use sanitized lab values in screenshots, examples, issues, and public documentation.
-\n## Installation
+## Installation
 
 ```bash
 pip install -e .
