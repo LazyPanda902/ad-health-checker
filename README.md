@@ -20,7 +20,14 @@ This project focuses on common Active Directory connectivity checks that IT supp
 - **Reverse DNS validation** — Verify PTR records for resolved IP addresses
 - **Python 3.11+** — Uses only the Python standard library (no external dependencies)
 
-## Installation
+
+
+## Privacy and security
+
+This tool performs network and directory-connectivity checks against domain-controller hostnames supplied by the user. Do not publish real internal domain names, controller hostnames, IP addresses, or troubleshooting output from private environments.
+
+Use sanitized lab values in screenshots, examples, issues, and public documentation.
+\n## Installation
 
 ```bash
 pip install -e .
