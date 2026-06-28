@@ -1,5 +1,11 @@
 # ad-health-checker
 
+<!-- portfolio-card -->
+<p align="center">
+  <img src="docs/assets/project-card.svg" alt="ad-health-checker project card" width="100%" />
+</p>
+<!-- /portfolio-card -->
+
 [![CI](https://github.com/LazyPanda902/ad-health-checker/actions/workflows/ci.yml/badge.svg)](https://github.com/LazyPanda902/ad-health-checker/actions/workflows/ci.yml)
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
