@@ -10,7 +10,7 @@
 ![Python](https://img.shields.io/badge/python-3.11%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
-A Python-based Active Directory health monitoring and diagnostic tool for Windows system administrators. Probes domain controllers for DNS resolution, service port availability, Kerberos reachability, and LDAP connectivity to identify connectivity and configuration issues.
+A Python CLI for diagnosing domain-controller connectivity. It checks DNS resolution, service-port reachability, Kerberos TCP availability and LDAP responses to narrow down common Active Directory support issues.
 
 ## Why this exists
 
@@ -18,7 +18,7 @@ This project focuses on common Active Directory connectivity checks that IT supp
 
 ## Features
 
-- **Comprehensive domain controller health checks** — DNS resolution, port availability, Kerberos KDC reachability, LDAP listener probes
+- **Domain controller connectivity checks** — DNS resolution, port availability, Kerberos KDC reachability, LDAP listener probes
 - **Multiple check granularity** — Run full health reports or focus on specific checks (DNS, ports, Kerberos, LDAP)
 - **Flexible service selection** — Choose which AD services to check: Kerberos, LDAP, LDAPS, SMB, DNS, RPC, Global Catalog variants
 - **Dual output formats** — Plain-text reports with summary statistics or machine-readable JSON
@@ -178,14 +178,10 @@ pytest tests/test_checker.py::test_check_dns_resolution_ok
 
 - Probes use TCP connections; UDP-based checks (DNS queries, Kerberos auth-only) are not performed
 - LDAP probe is an anonymous bind attempt; it does not validate user credentials or schema
+- Does not validate replication, Group Policy processing, authentication success, or overall AD health. A reachable port alone does not establish a healthy service.
 - Does not modify any AD objects or configurations (read-only)
 - Network timeouts default to 3 seconds per connection attempt
 
 ## License
 
 MIT
-
-
-## Repository owner
-
-LazyPanda902 is Ali Bidhendi's GitHub username for this portfolio repository.
